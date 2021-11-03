@@ -1,0 +1,390 @@
+.calculator{
+
+    display: grid;
+    grid-template-columns:  repeat(3, minmax(min-content, max-content));
+    grid-template-rows: repeat(5, minmax(min-content, max-content));
+    grid-template-areas:
+    "title title ."
+    "paymenttypecontrol-text paymentcontrolswitcher rateinfo"
+    "loansum loansum paymentinfo"
+    "loantime loantime submitbutton"
+    "captionone captionone captiontwo";
+    grid-column-gap: 75px;
+    padding: 75px 50px;
+}
+.calculator__tilte{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+    grid-area: title;
+}
+.calculator__infosubtitle{
+    margin: 0 0 20px 0;
+    color: #b0b2b5;
+    font-size: 20px;
+}
+.calculator__infocontent{
+    margin: 0;
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 600;
+
+}
+.calculator__switchertext{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+    grid-area: paymenttypecontrol-text;
+    align-self: center;
+}
+
+.calculator__switcher{
+    grid-area: paymentcontrolswitcher;
+    display: flex;
+    align-items: center;
+    margin:  0 0 0 auto;
+
+}
+
+.calculator__sumcomponent{
+    grid-area: loansum;
+    margin: 0 0 30px 0;
+}
+.calculator__timecomponent{
+    grid-area: loantime;
+    margin: 0 0 30px 0;
+}
+.calculator__captionone{
+    grid-area: captionone;
+    margin: 0;
+    color: #b0b2b5;
+}
+.calculator__captiontwo{
+    grid-area: captiontwo;
+    margin: 0;
+    color: #b0b2b5;
+}
+.calculator__submitbutton{
+    grid-area: submitbutton;
+}
+.calculator__rateinfo{
+    flex-direction: column;
+    grid-area: rateinfo;
+
+}
+.calculator__paymentinfo{
+    flex-direction: column;
+    grid-area: paymentinfo;
+    align-self: end;
+}
+
+@media screen and (max-width: 1060px) and (min-width: 900px) {
+ .calculator{
+     grid-template-columns: minmax(min-content, 210px) 250px 210px;
+     padding: 55px 30px;
+
+ }
+    .calculator__tilte{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 899px) and (min-width: 750px) {
+    .calculator{
+        grid-template-columns: minmax(min-content, 210px) 250px 180px;
+        padding: 30px 30px;
+        column-gap: 40px;
+    }
+    .calculator__tilte{
+        font-size: 30px;
+    }
+    .calculator__infocontent{
+        font-size: 50px;
+    }
+    .calculator__infosubtitle{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 749px) and (min-width: 625px) {
+    .calculator{
+
+        grid-template-columns: minmax(min-content, 130px) 180px 180px;
+        padding: 30px;
+        column-gap: 30px;
+    }
+    .calculator__tilte{
+        font-size: 24px;
+    }
+    .calculator__paymentinfo{
+        align-self: center;
+    }
+    .calculator__infocontent{
+        font-size: 40px;
+    }
+    .calculator__infosubtitle{
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+    .calculator__switchertext{
+        font-size: 24px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 10px;
+    }
+    .calculator__captiontwo{
+        font-size: 10px;
+    }
+    .calculator__switcher{
+
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 624px) and (min-width: 600px) {
+    .calculator{
+
+        grid-template-columns: minmax(min-content, 130px) 180px 180px;
+        padding: 30px;
+        column-gap: 30px;
+    }
+    .calculator__tilte{
+        font-size: 20px;
+    }
+
+    .calculator__paymentinfo{
+        align-self: center;
+    }
+    .calculator__infocontent{
+        font-size: 40px;
+    }
+    .calculator__infosubtitle{
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+    .calculator__switchertext{
+        font-size: 18px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 10px;
+    }
+    .calculator__captiontwo{
+        font-size: 10px;
+    }
+    .calculator__switcher{
+
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 460px) {
+    .calculator{
+
+        grid-template-columns: minmax(min-content, 130px) 180px 100px;
+        padding: 30px;
+        column-gap: 20px;
+    }
+    .calculator__tilte{
+        font-size: 20px;
+    }
+    .calculator__paymentinfo{
+        align-self: center;
+    }
+    .calculator__infocontent{
+        font-size: 30px;
+    }
+    .calculator__infosubtitle{
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+    .calculator__switchertext{
+        font-size: 15px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 10px;
+    }
+    .calculator__captiontwo{
+        font-size: 10px;
+    }
+    .calculator__switcher{
+
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+    }
+    .calculator__sumcomponent{
+        grid-area: loansum;
+        margin: 0 0 10px 0;
+    }
+    .calculator__timecomponent{
+        grid-area: loantime;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 459px) and (min-width: 426px) {
+    .calculator{
+
+        grid-template-columns: minmax(min-content, 130px) 180px 100px;
+        padding: 30px;
+        column-gap: 20px;
+    }
+    .calculator__tilte{
+        font-size: 18px;
+    }
+    .calculator__paymentinfo{
+        align-self: center;
+    }
+    .calculator__infocontent{
+        font-size: 30px;
+    }
+    .calculator__infosubtitle{
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+    .calculator__switchertext{
+        font-size: 15px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 10px;
+    }
+    .calculator__captiontwo{
+        font-size: 10px;
+    }
+    .calculator__switcher{
+
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+    }
+    .calculator__sumcomponent{
+        grid-area: loansum;
+        margin: 0 0 10px 0;
+    }
+    .calculator__timecomponent{
+        grid-area: loantime;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width: 400px) {
+    .calculator{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .calculator__tilte{
+        font-size: 35px;
+    }
+    .calculator__paymentinfo{
+        align-self: flex-start;
+    }
+    .calculator__infocontent{
+        font-size: 40px;
+    }
+    .calculator__infosubtitle{
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+    .calculator__switchertext{
+        font-size: 15px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 15px;
+        margin: 10px 0 10px 0;
+    }
+    .calculator__captiontwo{
+        font-size: 15px;
+        margin: 10px 0 0 0;
+    }
+    .calculator__switcher{
+        margin: 15px 0 10px 0;
+        justify-content: center;
+    }
+    .calculator__sumcomponent{
+        grid-area: loansum;
+        margin: 0 0 10px 0;
+    }
+    .calculator__timecomponent{
+        grid-area: loantime;
+        margin: 0 0 10px 0;
+    }
+
+    .calculator__switchertext{
+        font-size: 24px;
+        align-self: flex-start;
+        margin: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 399px) and (min-width: 320px) {
+    .calculator{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: calc(100% - 2*10px);
+    }
+    .calculator__tilte{
+        font-size: 25px;
+        width: 100%;
+    }
+    .calculator__paymentinfo{
+        align-self: flex-start;
+
+    }
+    .calculator__infocontent{
+        font-size: 35px;
+        width: fit-content;
+    }
+    .calculator__infosubtitle{
+        font-size: 18px;
+        margin: 0 0 10px 0;
+        width: fit-content;
+    }
+    .calculator__switchertext{
+        font-size: 15px;
+        width: fit-content;
+    }
+    .calculator__captionone{
+        font-size: 15px;
+        margin: 10px 0 10px 0;
+        width: fit-content;
+    }
+    .calculator__captiontwo{
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        width: fit-content;
+    }
+    .calculator__switcher{
+        margin: 15px 0 10px 0;
+        justify-content: center;
+    }
+    .calculator__sumcomponent{
+        grid-area: loansum;
+        margin: 0 0 10px 0;
+
+    }
+    .calculator__timecomponent{
+        grid-area: loantime;
+        margin: 0 0 10px 0;
+    }
+
+    .calculator__switchertext{
+        font-size: 24px;
+        align-self: flex-start;
+        margin: 15px 0 0 0;
+    }
+}
+
+

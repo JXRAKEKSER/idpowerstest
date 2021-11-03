@@ -1,17 +1,35 @@
-import React from 'react';
+import  React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {Calculator} from "./components/Calculator.js";
+import {widgets} from "./constants/data.js";
+
+class Container extends React.Component {
+    render() {
+        return (
+            <div className='container'></div>
+        );
+    }
+}
+
+
+
+class Game extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div className="page">
+                <Calculator widgetData = {this.props.data}/>
+            </div>
+        );
+    }
+}
+
+// ========================================
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Game data = {widgets} />,
+    document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

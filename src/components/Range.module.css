@@ -1,0 +1,173 @@
+.rangecontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-areas:
+    "textsumlable . textsum"
+    "range range range"
+    "minsum . maxsum";
+}
+
+.rangecontainer__textlable{
+    grid-area: textsumlable;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 10px 25px;
+
+}
+.rangecontainer__textsum{
+    grid-area: textsum;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 15px 10px 0;
+
+    justify-self: end;
+}
+.rangecontainer__range{
+    grid-area: range;
+    margin: 0;
+    -webkit-appearance: none;
+    background: rgba(214, 215, 219, 1);
+    border-radius: 5px;
+    background-image: linear-gradient(#67ac5b, #67ac5b);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+}
+.rangecontainer__range::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    background-color: #d6d7db;
+    border-radius: 5px;
+    height: 5px;
+   background: transparent;
+}
+
+.rangecontainer__range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #67ac5b;
+    transform: translate(0, -7px);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.rangecontainer__minsum{
+    grid-area: minsum;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    color: #b0b2b5;
+}
+.rangecontainer__maxsum{
+    grid-area: maxsum;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    color: #b0b2b5;
+    justify-self: end;
+}
+
+@media screen and (max-width: 899px) and (min-width: 790px) {
+    .rangecontainer__textlable{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 789px) and (min-width: 750px) {
+    .rangecontainer__textlable{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 749px) and (min-width: 625px) {
+    .rangecontainer__textlable{
+        font-size: 18px;
+        margin: 0 0 10px 10px;
+    }
+    .rangecontainer__textsum{
+        font-size: 18px;
+        margin: 0 10px 10px 0;
+    }
+    .rangecontainer__maxsum{
+        font-size: 18px;
+    }
+    .rangecontainer__minsum{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 624px) and (min-width: 600px){
+    .rangecontainer__textlable{
+        font-size: 15px;
+        margin: 0 0 10px 10px;
+    }
+    .rangecontainer__textsum{
+        font-size: 15px;
+        margin: 0 10px 10px 0;
+    }
+    .rangecontainer__maxsum{
+        font-size: 15px;
+    }
+    .rangecontainer__minsum{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 475px){
+    .rangecontainer__textlable{
+        font-size: 15px;
+        margin: 0 0 10px 10px;
+    }
+    .rangecontainer__textsum{
+        font-size: 15px;
+        margin: 0 10px 10px 0;
+    }
+    .rangecontainer__maxsum{
+        font-size: 15px;
+    }
+    .rangecontainer__minsum{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 474px)  and (min-width: 426px){
+    .rangecontainer{
+        margin: 0;
+    }
+
+    .rangecontainer__textlable{
+        font-size: 12px;
+        margin: 0 0 10px 10px;
+    }
+    .rangecontainer__textsum{
+        font-size: 12px;
+        margin: 0 10px 10px 0;
+    }
+    .rangecontainer__maxsum{
+        font-size: 12px;
+    }
+    .rangecontainer__minsum{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .rangecontainer{
+        margin: 0;
+    }
+
+    .rangecontainer__textlable{
+        font-size: 22px;
+        margin: 0 0 10px 10px;
+    }
+    .rangecontainer__textsum{
+        font-size: 22px;
+        margin: 0 10px 10px 0;
+    }
+    .rangecontainer__maxsum{
+        font-size: 24px;
+    }
+    .rangecontainer__minsum{
+        font-size: 24px;
+    }
+}
